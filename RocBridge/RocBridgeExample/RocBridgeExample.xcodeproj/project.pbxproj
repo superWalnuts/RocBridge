@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31C3745926838272000744C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745826838272000744C0 /* AppDelegate.m */; };
+		31C3745C26838272000744C0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745B26838272000744C0 /* SceneDelegate.m */; };
+		31C3745F26838272000744C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745E26838272000744C0 /* ViewController.m */; };
+		31C3746226838272000744C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C3746026838272000744C0 /* Main.storyboard */; };
+		31C3746426838272000744C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31C3746326838272000744C0 /* Assets.xcassets */; };
+		31C3746726838272000744C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C3746526838272000744C0 /* LaunchScreen.storyboard */; };
+		31C3746A26838272000744C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3746926838272000744C0 /* main.m */; };
+		31C3747426838273000744C0 /* RocBridgeExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3747326838273000744C0 /* RocBridgeExampleTests.m */; };
+		31C3747F26838273000744C0 /* RocBridgeExampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3747E26838273000744C0 /* RocBridgeExampleUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		31C3747026838273000744C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31C3744C26838272000744C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31C3745326838272000744C0;
+			remoteInfo = RocBridgeExample;
+		};
+		31C3747B26838273000744C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 31C3744C26838272000744C0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 31C3745326838272000744C0;
+			remoteInfo = RocBridgeExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		31C3745426838272000744C0 /* RocBridgeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocBridgeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C3745726838272000744C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		31C3745826838272000744C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		31C3745A26838272000744C0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		31C3745B26838272000744C0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		31C3745D26838272000744C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		31C3745E26838272000744C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		31C3746126838272000744C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31C3746326838272000744C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		31C3746626838272000744C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		31C3746826838272000744C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31C3746926838272000744C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		31C3746F26838273000744C0 /* RocBridgeExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocBridgeExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C3747326838273000744C0 /* RocBridgeExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RocBridgeExampleTests.m; sourceTree = "<group>"; };
+		31C3747526838273000744C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31C3747A26838273000744C0 /* RocBridgeExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RocBridgeExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		31C3747E26838273000744C0 /* RocBridgeExampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RocBridgeExampleUITests.m; sourceTree = "<group>"; };
+		31C3748026838273000744C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		31C3745126838272000744C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C3746C26838273000744C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C3747726838273000744C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31C3744B26838272000744C0 = {
+			isa = PBXGroup;
+			children = (
+				31C3745626838272000744C0 /* RocBridgeExample */,
+				31C3747226838273000744C0 /* RocBridgeExampleTests */,
+				31C3747D26838273000744C0 /* RocBridgeExampleUITests */,
+				31C3745526838272000744C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		31C3745526838272000744C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31C3745426838272000744C0 /* RocBridgeExample.app */,
+				31C3746F26838273000744C0 /* RocBridgeExampleTests.xctest */,
+				31C3747A26838273000744C0 /* RocBridgeExampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		31C3745626838272000744C0 /* RocBridgeExample */ = {
+			isa = PBXGroup;
+			children = (
+				31C3745726838272000744C0 /* AppDelegate.h */,
+				31C3745826838272000744C0 /* AppDelegate.m */,
+				31C3745A26838272000744C0 /* SceneDelegate.h */,
+				31C3745B26838272000744C0 /* SceneDelegate.m */,
+				31C3745D26838272000744C0 /* ViewController.h */,
+				31C3745E26838272000744C0 /* ViewController.m */,
+				31C3746026838272000744C0 /* Main.storyboard */,
+				31C3746326838272000744C0 /* Assets.xcassets */,
+				31C3746526838272000744C0 /* LaunchScreen.storyboard */,
+				31C3746826838272000744C0 /* Info.plist */,
+				31C3746926838272000744C0 /* main.m */,
+			);
+			path = RocBridgeExample;
+			sourceTree = "<group>";
+		};
+		31C3747226838273000744C0 /* RocBridgeExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				31C3747326838273000744C0 /* RocBridgeExampleTests.m */,
+				31C3747526838273000744C0 /* Info.plist */,
+			);
+			path = RocBridgeExampleTests;
+			sourceTree = "<group>";
+		};
+		31C3747D26838273000744C0 /* RocBridgeExampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				31C3747E26838273000744C0 /* RocBridgeExampleUITests.m */,
+				31C3748026838273000744C0 /* Info.plist */,
+			);
+			path = RocBridgeExampleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		31C3745326838272000744C0 /* RocBridgeExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31C3748326838273000744C0 /* Build configuration list for PBXNativeTarget "RocBridgeExample" */;
+			buildPhases = (
+				31C3745026838272000744C0 /* Sources */,
+				31C3745126838272000744C0 /* Frameworks */,
+				31C3745226838272000744C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RocBridgeExample;
+			productName = RocBridgeExample;
+			productReference = 31C3745426838272000744C0 /* RocBridgeExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		31C3746E26838273000744C0 /* RocBridgeExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31C3748626838273000744C0 /* Build configuration list for PBXNativeTarget "RocBridgeExampleTests" */;
+			buildPhases = (
+				31C3746B26838273000744C0 /* Sources */,
+				31C3746C26838273000744C0 /* Frameworks */,
+				31C3746D26838273000744C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31C3747126838273000744C0 /* PBXTargetDependency */,
+			);
+			name = RocBridgeExampleTests;
+			productName = RocBridgeExampleTests;
+			productReference = 31C3746F26838273000744C0 /* RocBridgeExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		31C3747926838273000744C0 /* RocBridgeExampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31C3748926838273000744C0 /* Build configuration list for PBXNativeTarget "RocBridgeExampleUITests" */;
+			buildPhases = (
+				31C3747626838273000744C0 /* Sources */,
+				31C3747726838273000744C0 /* Frameworks */,
+				31C3747826838273000744C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31C3747C26838273000744C0 /* PBXTargetDependency */,
+			);
+			name = RocBridgeExampleUITests;
+			productName = RocBridgeExampleUITests;
+			productReference = 31C3747A26838273000744C0 /* RocBridgeExampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		31C3744C26838272000744C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "杨大鹏";
+				TargetAttributes = {
+					31C3745326838272000744C0 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					31C3746E26838273000744C0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 31C3745326838272000744C0;
+					};
+					31C3747926838273000744C0 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 31C3745326838272000744C0;
+					};
+				};
+			};
+			buildConfigurationList = 31C3744F26838272000744C0 /* Build configuration list for PBXProject "RocBridgeExample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 31C3744B26838272000744C0;
+			productRefGroup = 31C3745526838272000744C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				31C3745326838272000744C0 /* RocBridgeExample */,
+				31C3746E26838273000744C0 /* RocBridgeExampleTests */,
+				31C3747926838273000744C0 /* RocBridgeExampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		31C3745226838272000744C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C3746726838272000744C0 /* LaunchScreen.storyboard in Resources */,
+				31C3746426838272000744C0 /* Assets.xcassets in Resources */,
+				31C3746226838272000744C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C3746D26838273000744C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C3747826838273000744C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		31C3745026838272000744C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C3745F26838272000744C0 /* ViewController.m in Sources */,
+				31C3745926838272000744C0 /* AppDelegate.m in Sources */,
+				31C3746A26838272000744C0 /* main.m in Sources */,
+				31C3745C26838272000744C0 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C3746B26838273000744C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C3747426838273000744C0 /* RocBridgeExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31C3747626838273000744C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31C3747F26838273000744C0 /* RocBridgeExampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31C3747126838273000744C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31C3745326838272000744C0 /* RocBridgeExample */;
+			targetProxy = 31C3747026838273000744C0 /* PBXContainerItemProxy */;
+		};
+		31C3747C26838273000744C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 31C3745326838272000744C0 /* RocBridgeExample */;
+			targetProxy = 31C3747B26838273000744C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		31C3746026838272000744C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31C3746126838272000744C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		31C3746526838272000744C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				31C3746626838272000744C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		31C3748126838273000744C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		31C3748226838273000744C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		31C3748426838273000744C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YU7P7Z6WD;
+				INFOPLIST_FILE = RocBridgeExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dapeng.test.RocBridgeExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		31C3748526838273000744C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YU7P7Z6WD;
+				INFOPLIST_FILE = RocBridgeExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dapeng.test.RocBridgeExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		31C3748726838273000744C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YU7P7Z6WD;
+				INFOPLIST_FILE = RocBridgeExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dapeng.test.RocBridgeExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RocBridgeExample.app/RocBridgeExample";
+			};
+			name = Debug;
+		};
+		31C3748826838273000744C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YU7P7Z6WD;
+				INFOPLIST_FILE = RocBridgeExampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dapeng.test.RocBridgeExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RocBridgeExample.app/RocBridgeExample";
+			};
+			name = Release;
+		};
+		31C3748A26838273000744C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YU7P7Z6WD;
+				INFOPLIST_FILE = RocBridgeExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dapeng.test.RocBridgeExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RocBridgeExample;
+			};
+			name = Debug;
+		};
+		31C3748B26838273000744C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5YU7P7Z6WD;
+				INFOPLIST_FILE = RocBridgeExampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dapeng.test.RocBridgeExampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RocBridgeExample;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		31C3744F26838272000744C0 /* Build configuration list for PBXProject "RocBridgeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C3748126838273000744C0 /* Debug */,
+				31C3748226838273000744C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31C3748326838273000744C0 /* Build configuration list for PBXNativeTarget "RocBridgeExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C3748426838273000744C0 /* Debug */,
+				31C3748526838273000744C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31C3748626838273000744C0 /* Build configuration list for PBXNativeTarget "RocBridgeExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C3748726838273000744C0 /* Debug */,
+				31C3748826838273000744C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31C3748926838273000744C0 /* Build configuration list for PBXNativeTarget "RocBridgeExampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				31C3748A26838273000744C0 /* Debug */,
+				31C3748B26838273000744C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 31C3744C26838272000744C0 /* Project object */;
+}
