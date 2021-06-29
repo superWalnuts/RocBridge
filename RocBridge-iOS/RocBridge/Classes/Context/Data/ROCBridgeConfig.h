@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ROCBridgeHybridRegisterData.h"
+#import "ROCBridgeHybridModuleRegister.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,12 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// Name of the JSContext. Exposed when remote debugging the context.
 @property(nonatomic, strong) NSString *name;
 
-@property(nonatomic, strong) NSArray<ROCBridgeHybridRegisterData *> *hybridArray;
+/// Registration of Hybrid Modules.
+@property(nonatomic, strong) NSArray<ROCBridgeHybridModuleRegister *> *hybridModules;
 
-@property(nonatomic, strong) NSDictionary *mainParams;
+/// Pass it into the main method when the environment is initialized.
+@property(nonatomic, strong) NSDictionary *mainParameter;
 
+/// Current viewController.
 @property(nonatomic, weak) UIViewController *viewController;
-
 
 @end
 

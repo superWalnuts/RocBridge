@@ -1,8 +1,8 @@
 //
-//  ROCBaseManager.h
+//  ROCBridgeBaseManager.h
 //  RocBridge
 //
-//  Created by RocYang on 2021/6/28.
+//  Created by RocYang on 2021/6/30.
 //  Copyright © 2021 RocYang. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ROCBaseManager : NSObject
+@interface ROCBridgeBaseManager : NSObject
 
 @end
 
