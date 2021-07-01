@@ -19,14 +19,22 @@
 		31CDF502268A0ABF00590431 /* RocBridge.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 31CDF4EC268A0ABF00590431 /* RocBridge.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		31CDF510268A0C5100590431 /* ROCBridgeContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF50E268A0C5100590431 /* ROCBridgeContext.m */; };
 		31CDF511268A0C5100590431 /* ROCBridgeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF50F268A0C5100590431 /* ROCBridgeContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31CDF51B268A139C00590431 /* ROCBridgeConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF519268A139C00590431 /* ROCBridgeConfig.h */; };
+		31CDF51B268A139C00590431 /* ROCBridgeConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF519268A139C00590431 /* ROCBridgeConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31CDF51C268A139C00590431 /* ROCBridgeConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF51A268A139C00590431 /* ROCBridgeConfig.m */; };
-		31CDF533268B77F600590431 /* ROCBridgeHybridModuleRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF531268B77F600590431 /* ROCBridgeHybridModuleRegister.h */; };
+		31CDF533268B77F600590431 /* ROCBridgeHybridModuleRegister.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF531268B77F600590431 /* ROCBridgeHybridModuleRegister.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31CDF534268B77F600590431 /* ROCBridgeHybridModuleRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF532268B77F600590431 /* ROCBridgeHybridModuleRegister.m */; };
-		31CDF537268B7B3B00590431 /* ROCBridgeBaseHybridModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF535268B7B3B00590431 /* ROCBridgeBaseHybridModule.h */; };
+		31CDF537268B7B3B00590431 /* ROCBridgeBaseHybridModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF535268B7B3B00590431 /* ROCBridgeBaseHybridModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31CDF538268B7B3B00590431 /* ROCBridgeBaseHybridModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF536268B7B3B00590431 /* ROCBridgeBaseHybridModule.m */; };
 		31CDF53B268B7B5A00590431 /* ROCBridgeBaseManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF539268B7B5A00590431 /* ROCBridgeBaseManager.h */; };
 		31CDF53C268B7B5A00590431 /* ROCBridgeBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF53A268B7B5A00590431 /* ROCBridgeBaseManager.m */; };
+		31CDF53F268E09AE00590431 /* ROCBridgeHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF53D268E09AE00590431 /* ROCBridgeHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31CDF540268E09AE00590431 /* ROCBridgeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF53E268E09AE00590431 /* ROCBridgeHandler.m */; };
+		31CDF543268E0DC200590431 /* ROCBridgeEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF541268E0DC200590431 /* ROCBridgeEventHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31CDF544268E0DC200590431 /* ROCBridgeEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF542268E0DC200590431 /* ROCBridgeEventHandler.m */; };
+		31CDF547268E0E4500590431 /* ROCBridgeHybridResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF545268E0E4500590431 /* ROCBridgeHybridResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31CDF548268E0E4500590431 /* ROCBridgeHybridResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF546268E0E4500590431 /* ROCBridgeHybridResponse.m */; };
+		31CDF54F268E118300590431 /* ROCBridgeContextLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF54D268E118300590431 /* ROCBridgeContextLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31CDF550268E118300590431 /* ROCBridgeContextLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF54E268E118300590431 /* ROCBridgeContextLog.m */; };
 		64932026079DF93ACAF23DDE /* libPods-RocBridgeExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33CDB5830DC019965FA4F18 /* libPods-RocBridgeExample.a */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +89,14 @@
 		31CDF536268B7B3B00590431 /* ROCBridgeBaseHybridModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeBaseHybridModule.m; sourceTree = "<group>"; };
 		31CDF539268B7B5A00590431 /* ROCBridgeBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeBaseManager.h; sourceTree = "<group>"; };
 		31CDF53A268B7B5A00590431 /* ROCBridgeBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeBaseManager.m; sourceTree = "<group>"; };
+		31CDF53D268E09AE00590431 /* ROCBridgeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeHandler.h; sourceTree = "<group>"; };
+		31CDF53E268E09AE00590431 /* ROCBridgeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeHandler.m; sourceTree = "<group>"; };
+		31CDF541268E0DC200590431 /* ROCBridgeEventHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeEventHandler.h; sourceTree = "<group>"; };
+		31CDF542268E0DC200590431 /* ROCBridgeEventHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeEventHandler.m; sourceTree = "<group>"; };
+		31CDF545268E0E4500590431 /* ROCBridgeHybridResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeHybridResponse.h; sourceTree = "<group>"; };
+		31CDF546268E0E4500590431 /* ROCBridgeHybridResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeHybridResponse.m; sourceTree = "<group>"; };
+		31CDF54D268E118300590431 /* ROCBridgeContextLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeContextLog.h; sourceTree = "<group>"; };
+		31CDF54E268E118300590431 /* ROCBridgeContextLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeContextLog.m; sourceTree = "<group>"; };
 		55839F3E097CFF26B37D80BA /* Pods-RocBridgeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocBridgeExample.debug.xcconfig"; path = "Target Support Files/Pods-RocBridgeExample/Pods-RocBridgeExample.debug.xcconfig"; sourceTree = "<group>"; };
 		C33CDB5830DC019965FA4F18 /* libPods-RocBridgeExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RocBridgeExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -205,8 +221,16 @@
 			children = (
 				31CDF519268A139C00590431 /* ROCBridgeConfig.h */,
 				31CDF51A268A139C00590431 /* ROCBridgeConfig.m */,
+				31CDF53D268E09AE00590431 /* ROCBridgeHandler.h */,
+				31CDF53E268E09AE00590431 /* ROCBridgeHandler.m */,
+				31CDF541268E0DC200590431 /* ROCBridgeEventHandler.h */,
+				31CDF542268E0DC200590431 /* ROCBridgeEventHandler.m */,
 				31CDF531268B77F600590431 /* ROCBridgeHybridModuleRegister.h */,
 				31CDF532268B77F600590431 /* ROCBridgeHybridModuleRegister.m */,
+				31CDF545268E0E4500590431 /* ROCBridgeHybridResponse.h */,
+				31CDF546268E0E4500590431 /* ROCBridgeHybridResponse.m */,
+				31CDF54D268E118300590431 /* ROCBridgeContextLog.h */,
+				31CDF54E268E118300590431 /* ROCBridgeContextLog.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -232,6 +256,10 @@
 				31CDF537268B7B3B00590431 /* ROCBridgeBaseHybridModule.h in Headers */,
 				31CDF4FE268A0ABF00590431 /* RocBridge.h in Headers */,
 				31CDF51B268A139C00590431 /* ROCBridgeConfig.h in Headers */,
+				31CDF547268E0E4500590431 /* ROCBridgeHybridResponse.h in Headers */,
+				31CDF54F268E118300590431 /* ROCBridgeContextLog.h in Headers */,
+				31CDF543268E0DC200590431 /* ROCBridgeEventHandler.h in Headers */,
+				31CDF53F268E09AE00590431 /* ROCBridgeHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,9 +403,13 @@
 			files = (
 				31CDF510268A0C5100590431 /* ROCBridgeContext.m in Sources */,
 				31CDF538268B7B3B00590431 /* ROCBridgeBaseHybridModule.m in Sources */,
+				31CDF540268E09AE00590431 /* ROCBridgeHandler.m in Sources */,
 				31CDF53C268B7B5A00590431 /* ROCBridgeBaseManager.m in Sources */,
+				31CDF550268E118300590431 /* ROCBridgeContextLog.m in Sources */,
 				31CDF51C268A139C00590431 /* ROCBridgeConfig.m in Sources */,
 				31CDF534268B77F600590431 /* ROCBridgeHybridModuleRegister.m in Sources */,
+				31CDF548268E0E4500590431 /* ROCBridgeHybridResponse.m in Sources */,
+				31CDF544268E0DC200590431 /* ROCBridgeEventHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
