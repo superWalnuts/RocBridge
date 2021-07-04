@@ -24,6 +24,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSDictionary *data;
 @end
 
-typedef void(^RocBridgeResponseCallback)(ROCBridgeHybridResponse *response);
+typedef void(^ROCBridgeResponseCallback)(ROCBridgeHybridResponse *response);
 
 NS_ASSUME_NONNULL_END

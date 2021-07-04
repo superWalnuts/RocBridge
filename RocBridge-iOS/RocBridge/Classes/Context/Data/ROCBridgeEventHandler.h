@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ROCBridgeEventHandler : NSObject
 @property (nonatomic) NSString *eventName;
-@property (nonatomic) RocBridgeResponseCallback callback;
+@property (nonatomic) ROCBridgeResponseCallback callback;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -8,7 +8,9 @@
 
 #import "ROCBridgeConfig.h"
 #import "ROCBridgeHandler.h"
-
+#import "ROCBridgeHybridRequest.h"
+#import "ROCBridgeEventHandler.h"
+#import <WebKit/WKWebView.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ROCBridgeContext : NSObject
@@ -23,7 +25,24 @@ NS_ASSUME_NONNULL_BEGIN
                           contextConfig:(ROCBridgeConfig *)contextConfig
                          contextHandler:(ROCBridgeHandler *)contextHandler;
 
-    
+
+- (instancetype)initContextWithWebView:(WKWebView *)webView
+                                   url:(NSString *)url
+                         contextConfig:(ROCBridgeConfig *)contextConfig
+                        contextHandler:(ROCBridgeHandler *)contextHandler;
+
+
+
+/// Invokes an asynchronous method in the JS context.
+/// @param hybridRequest Request info.
+- (void)invokeJSAsyncMethod:(ROCBridgeHybridRequest *)hybridRequest;
+
+
+- (void)registerEventHandler:(ROCBridgeEventHandler *)eventHandler;
+
+
+- (void)unRegisterEventHandler:(ROCBridgeEventHandler *)eventHandler;
+
 
 @end
 
