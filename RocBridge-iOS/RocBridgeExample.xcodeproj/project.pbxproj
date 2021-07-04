@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		313D7A702691F1AA0068BCC9 /* ROCBridgeContextCoreProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 313D7A6F2691F1AA0068BCC9 /* ROCBridgeContextCoreProtocol.h */; };
 		31C3745926838272000744C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745826838272000744C0 /* AppDelegate.m */; };
 		31C3745C26838272000744C0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745B26838272000744C0 /* SceneDelegate.m */; };
 		31C3745F26838272000744C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745E26838272000744C0 /* ViewController.m */; };
@@ -35,7 +36,7 @@
 		31CDF548268E0E4500590431 /* ROCBridgeHybridResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF546268E0E4500590431 /* ROCBridgeHybridResponse.m */; };
 		31CDF54F268E118300590431 /* ROCBridgeContextLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF54D268E118300590431 /* ROCBridgeContextLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31CDF550268E118300590431 /* ROCBridgeContextLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF54E268E118300590431 /* ROCBridgeContextLog.m */; };
-		31CDF5532691B70A00590431 /* ROCBridgeHybridRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF5512691B70A00590431 /* ROCBridgeHybridRequest.h */; };
+		31CDF5532691B70A00590431 /* ROCBridgeHybridRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 31CDF5512691B70A00590431 /* ROCBridgeHybridRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31CDF5542691B70A00590431 /* ROCBridgeHybridRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CDF5522691B70A00590431 /* ROCBridgeHybridRequest.m */; };
 		64932026079DF93ACAF23DDE /* libPods-RocBridgeExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C33CDB5830DC019965FA4F18 /* libPods-RocBridgeExample.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 
 /* Begin PBXFileReference section */
 		05C9702EB2720F5953B94D1A /* Pods-RocBridgeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RocBridgeExample.release.xcconfig"; path = "Target Support Files/Pods-RocBridgeExample/Pods-RocBridgeExample.release.xcconfig"; sourceTree = "<group>"; };
+		313D7A6F2691F1AA0068BCC9 /* ROCBridgeContextCoreProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeContextCoreProtocol.h; sourceTree = "<group>"; };
 		31C3745426838272000744C0 /* RocBridgeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocBridgeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C3745726838272000744C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		31C3745826838272000744C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -165,6 +167,20 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		313D7A712691F1C50068BCC9 /* JSContext */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSContext;
+			sourceTree = "<group>";
+		};
+		313D7A722691F1EC0068BCC9 /* WebviewContext */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebviewContext;
+			sourceTree = "<group>";
+		};
 		31C3744B26838272000744C0 = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +252,8 @@
 		31CDF512268A11D200590431 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				313D7A722691F1EC0068BCC9 /* WebviewContext */,
+				313D7A712691F1C50068BCC9 /* JSContext */,
 				31CDF513268A121400590431 /* Base */,
 			);
 			path = Manager;
@@ -246,6 +264,7 @@
 			children = (
 				31CDF539268B7B5A00590431 /* ROCBridgeBaseManager.h */,
 				31CDF53A268B7B5A00590431 /* ROCBridgeBaseManager.m */,
+				313D7A6F2691F1AA0068BCC9 /* ROCBridgeContextCoreProtocol.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -281,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31CDF53B268B7B5A00590431 /* ROCBridgeBaseManager.h in Headers */,
+				313D7A702691F1AA0068BCC9 /* ROCBridgeContextCoreProtocol.h in Headers */,
 				31CDF533268B77F600590431 /* ROCBridgeHybridModuleRegister.h in Headers */,
 				31CDF511268A0C5100590431 /* ROCBridgeContext.h in Headers */,
 				31CDF537268B7B3B00590431 /* ROCBridgeBaseHybridModule.h in Headers */,

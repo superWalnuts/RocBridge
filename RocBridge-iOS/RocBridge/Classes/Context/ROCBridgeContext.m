@@ -27,7 +27,7 @@
         _jsString = jsString;
         _contextConfig = contextConfig;
         _contextHandler = contextHandler;
-        _bridgeQueue = dispatch_queue_create([NSString stringWithFormat:@"rocbBridge.%@.bridgequeue",], DISPATCH_QUEUE_SERIAL);
+        [self startInitContext];
     }
     return self;
 }
@@ -50,7 +50,9 @@
 {
     NSString *contextName = self.contextConfig.name;
     NSString *queueName = [NSString stringWithFormat:@"rocbBridge.%@.bridgequeue",(contextName.length > 0)?contextName:@"default"];
-    self.bridgeQueue = dispatch_queue_create(queueName, DISPATCH_QUEUE_SERIAL)
+    self.bridgeQueue = dispatch_queue_create([queueName UTF8String], DISPATCH_QUEUE_SERIAL);
+    
+    
 }
 
 - (void)invokeJSAsyncMethod:(ROCBridgeHybridRequest *)request

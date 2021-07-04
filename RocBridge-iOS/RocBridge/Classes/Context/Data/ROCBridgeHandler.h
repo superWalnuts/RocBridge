@@ -10,11 +10,11 @@
 #import "ROCBridgeEventHandler.h"
 #import "ROCBridgeContextLog.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void(^ROCExceptionHandler)(NSString *exceptionInfo,NSString *detailInfo);
 typedef void(^ROCInitCompleteHandler)(BOOL success);
 typedef void(^ROCLogHandler)(ROCBridgeContextLog *log);
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface ROCBridgeHandler : NSObject
 
