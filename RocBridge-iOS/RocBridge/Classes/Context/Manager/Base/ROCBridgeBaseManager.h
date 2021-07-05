@@ -8,10 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ROCBridgeHandler.h"
+#import "ROCBridgeContextCoreProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
-
-typedef NSDictionary *_Nullable(^ROCBridgeMethodImplementation)(NSDictionary *invokeInfo, NSDictionary *data);
 
 @interface ROCBridgeBaseManagerConfig : NSObject
 
@@ -19,7 +18,7 @@ typedef NSDictionary *_Nullable(^ROCBridgeMethodImplementation)(NSDictionary *in
 
 @property (nonatomic) ROCExceptionHandler exceptionHandler;
 
-@property (nonatomic) id contextCore;
+@property (nonatomic) id<ROCBridgeContextCoreProtocol> contextCore;
 
 @end
 
@@ -36,11 +35,9 @@ typedef NSDictionary *_Nullable(^ROCBridgeMethodImplementation)(NSDictionary *in
 
 - (void)throwException:(NSString *)exceptionInfo detailInfo:(NSString *)detailInfo;
 
-- (NSDictionary *)invokeMethod:(NSString *)methodName arguments:(NSArray *)arguments;
+- (NSDictionary *)invokeMethodWithMethodName:(NSString *)methodName arguments:(NSArray *)arguments;
  
-- (void)injectionMethodImplementation:(NSString *)methodName methodImplementation:(ROCBridgeMethodImplementation)methodImplementation;
-
-- (id)getPropertyWithKey:(NSString *)key;
+- (void)injectionMethodWithMethodName:(NSString *)methodName implementation:(ROCBridgeMethodImplementation)implementation;
 
 @end
 

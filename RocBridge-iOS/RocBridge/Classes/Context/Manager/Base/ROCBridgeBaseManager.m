@@ -7,40 +7,55 @@
 //
 
 #import "ROCBridgeBaseManager.h"
+@interface ROCBridgeBaseManager()
+@property (nonatomic) ROCBridgeBaseManagerConfig *baseManagerConfig;
+@end
 
 @implementation ROCBridgeBaseManager
 
 - (instancetype)initWithConfig:(ROCBridgeBaseManagerConfig *)baseManagerConfig
 {
-    return nil;
+    self = [super init];
+    if (self) {
+        _baseManagerConfig = baseManagerConfig;
+        [self initManagerCompleted];
+    }
+    return self;
 }
 
-- (void)initManagerCompleted{
+- (void)initManagerCompleted
+{
     
 }
 
 - (NSString *)managerName
 {
-    return nil;
+    return @"";
 }
 
 - (void)throwException:(NSString *)exceptionInfo detailInfo:(NSString *)detailInfo
 {
-    
+    if (self.baseManagerConfig.exceptionHandler) {
+        self.baseManagerConfig.exceptionHandler(exceptionInfo, detailInfo);
+    }
 }
 
-- (NSDictionary *)invokeMethod:(NSString *)methodName arguments:(NSArray *)arguments
+- (NSDictionary *)invokeMethodWithMethodName:(NSString *)methodName
+                                   arguments:(NSArray *)arguments
 {
+    if (self.baseManagerConfig.contextCore) {
+        return [self.baseManagerConfig.contextCore invokeMethodWithManagerName:[self managerName] methodName:methodName arguments:arguments];
+    }
+    
     return nil;
 }
  
-- (void)injectionMethodImplementation:(NSString *)methodName methodImplementation:(ROCBridgeMethodImplementation)methodImplementation
+- (void)injectionMethodWithMethodName:(NSString *)methodName
+                       implementation:(ROCBridgeMethodImplementation)implementation
 {
-    
+    if (self.baseManagerConfig.contextCore) {
+        [self.baseManagerConfig.contextCore injectionMethodWithManagerName:[self managerName] methodName:methodName implementation:implementation];
+    }
 }
 
-- (id)getPropertyWithKey:(NSString *)key
-{
-    return nil;
-}
 @end
