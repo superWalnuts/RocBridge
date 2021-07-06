@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "ROCBridgeContextCoreProtocol.h"
+#import "ROCBridgeConfig.h"
+#import "ROCBridgeHandler.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ROCBridgeJSContextCore : NSObject<ROCBridgeContextCoreProtocol>
 
+- (instancetype)initContextCoreWithJSString:(NSString *)jsString
+                              contextConfig:(ROCBridgeConfig *)contextConfig
+                             contextHandler:(ROCBridgeHandler *)contextHandler;
 @end
 
 NS_ASSUME_NONNULL_END

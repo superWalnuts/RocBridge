@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ROCBridgeHybridModuleRegister.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -24,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// Current viewController.
 @property(nonatomic, weak) UIViewController *viewController;
+
+@property(nonatomic, strong) JSVirtualMachine *jsVirtualMachine;
 
 @end
 

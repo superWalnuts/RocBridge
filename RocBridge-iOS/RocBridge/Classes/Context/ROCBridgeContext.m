@@ -7,9 +7,11 @@
 //
 
 #import "ROCBridgeContext.h"
+#import "ROCBridgeContextCoreProtocol.h"
+#import "ROCBridgeJSContextCore.h"
 
 @interface ROCBridgeContext()
-@property (nonatomic) NSString *jsString;
+@property (nonatomic) id<ROCBridgeContextCoreProtocol> contextCore;
 @property (nonatomic) ROCBridgeConfig *contextConfig;
 @property (nonatomic) ROCBridgeHandler *contextHandler;
 @property (nonatomic) dispatch_queue_t bridgeQueue;
@@ -24,7 +26,7 @@
 {
     self = [super init];
     if (self) {
-        _jsString = jsString;
+        _contextCore = [[ROCBridgeJSContextCore alloc] initContextCoreWithJSString:jsString contextConfig:contextConfig contextHandler:contextHandler];
         _contextConfig = contextConfig;
         _contextHandler = contextHandler;
         [self startInitContext];
@@ -51,6 +53,8 @@
     NSString *contextName = self.contextConfig.name;
     NSString *queueName = [NSString stringWithFormat:@"rocbBridge.%@.bridgequeue",(contextName.length > 0)?contextName:@"default"];
     self.bridgeQueue = dispatch_queue_create([queueName UTF8String], DISPATCH_QUEUE_SERIAL);
+    
+    
     
     
 }

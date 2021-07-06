@@ -23,15 +23,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initContextWithJSString:(NSString *)jsString
                           contextConfig:(ROCBridgeConfig *)contextConfig
-                         contextHandler:(ROCBridgeHandler *)contextHandler;
+                         contextHandler:(ROCBridgeHandler *)contextHandler NS_DESIGNATED_INITIALIZER;
 
 
 - (instancetype)initContextWithWebView:(WKWebView *)webView
                                    url:(NSString *)url
                          contextConfig:(ROCBridgeConfig *)contextConfig
-                        contextHandler:(ROCBridgeHandler *)contextHandler;
+                        contextHandler:(ROCBridgeHandler *)contextHandler NS_DESIGNATED_INITIALIZER;
 
 
+- (instancetype)init NS_UNAVAILABLE;
 
 /// Invokes an asynchronous method in the JS context.
 /// @param hybridRequest Request info.
