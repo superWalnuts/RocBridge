@@ -1,0 +1,15 @@
+{
+    "name": "RocBridgeExample",
+    "version": "1.0.0",
+    "description": "RocBridge Example.",
+    "scripts": {
+        "start": "node ./node_modules/RocBridge/local-cli/start.js",
+        "startTest": "node ./RocBridge/local-cli/start.js -rd ./"
+    },
+    "author": "",
+    "license": "Apache",
+    "devDependencies": {
+        "RocBridge": "./RocBridge"
+    },
+    "dependencies": {}
+}

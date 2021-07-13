@@ -1,30 +1,29 @@
-var spawn = require('child_process');
-var ArgumentParser = require('argparse');
+var { spawn } = require('child_process');
+var { ArgumentParser } = require('argparse');
 var os = require('os');
 var inquirer = require('inquirer');
 var fs = require('fs')
 
 var parser = new ArgumentParser({
-    version: '0.0.1',
-    addHelp: true,
+    add_help: true,
     description: 'Start a RocBridge js service.'
 });
 
-parser.addArgument(
-    ['-rd'],
+parser.add_argument(
+    '-rd',
     {
         help: 'Set up the js service root directory.'
     }
 );
 
-parser.addArgument(
-    ['-port'],
+parser.add_argument(
+    '-port',
     {
         help: 'Set up the js service port.'
     }
 );
 
-var args = parser.parseArgs();
+var args = parser.parse_args();
 
 let rootConfigPath = args['rd'];
 if (!rootConfigPath) {
@@ -75,15 +74,15 @@ async function main() {
         process.exit(0);
     });
 
-    let serverChild = spawn("node", [`${rootConfigPath}RocBridge/debug/debug_server.js`, '-rd', rootConfigPath, '-ip', currentIp, '-port', assignPort]);
-    serverChild.stdout.on('data', (data) => {
-        console.log(`\n${data}`)
-    });
+    // let serverChild = spawn("node", [`${rootConfigPath}RocBridge/debug/debug_server.js`, '-rd', rootConfigPath, '-ip', currentIp, '-port', assignPort]);
+    // serverChild.stdout.on('data', (data) => {
+    //     console.log(`\n${data}`)
+    // });
 
-    serverChild.stderr.on('data', (data) => {
-        console.log(`server error`);
-        console.error(`\n${data}`);
-    });
+    // serverChild.stderr.on('data', (data) => {
+    //     console.log(`server error`);
+    //     console.error(`\n${data}`);
+    // });
 
     process.stdin.resume();
 
