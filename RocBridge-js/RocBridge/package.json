@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "A bridge between JS and OC,The bridge is very convenient.",
   "license": "Apache",
-  "main": "./context/context.js",
+  "main": "./context/context.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/superWalnuts/RocBridge.git"

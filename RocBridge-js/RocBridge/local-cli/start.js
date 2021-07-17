@@ -66,7 +66,7 @@ async function main() {
     });
 
     webPackChild.stderr.on('data', (data) => {
-        console.log(`webPack error`);
+        console.log(`webPack error.`);
         console.error(`\n${data}`);
     });
 
@@ -74,15 +74,15 @@ async function main() {
         process.exit(0);
     });
 
-    // let serverChild = spawn("node", [`${rootConfigPath}RocBridge/debug/debug_server.js`, '-rd', rootConfigPath, '-ip', currentIp, '-port', assignPort]);
-    // serverChild.stdout.on('data', (data) => {
-    //     console.log(`\n${data}`)
-    // });
+    let serverChild = spawn("node", [`${rootConfigPath}RocBridge/debug/debug-server.js`, '-rd', rootConfigPath, '-ip', currentIp, '-port', assignPort]);
+    serverChild.stdout.on('data', (data) => {
+        console.log(`\n${data}`)
+    });
 
-    // serverChild.stderr.on('data', (data) => {
-    //     console.log(`server error`);
-    //     console.error(`\n${data}`);
-    // });
+    serverChild.stderr.on('data', (data) => {
+        console.log(`Debug server error.`);
+        console.error(`\n${data}`);
+    });
 
     process.stdin.resume();
 
@@ -110,7 +110,7 @@ if (!srcIsExist && !mainTsIsExist && !mainJsIsExist) {
     fs.mkdirSync("./src");
 
     // 创建HelloWorld文件
-    var demoHelloWorldPath = `${rootConfigPath}RocBridge/local-cli/staging/src/hello_world.ts`;
+    var demoHelloWorldPath = `${rootConfigPath}RocBridge/local-cli/staging/src/hello-world.ts`;
     fs.writeFileSync('./src/hello_world.ts', fs.readFileSync(demoHelloWorldPath));
 
     main();
