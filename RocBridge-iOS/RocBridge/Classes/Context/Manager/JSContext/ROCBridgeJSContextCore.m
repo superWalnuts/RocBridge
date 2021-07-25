@@ -58,6 +58,11 @@
     [self.jsContext evaluateScript:@"var window = {}"];
 
     [self.jsContext evaluateScript:self.jsString];
+    JSValue *window = self.jsContext[@"window"];
+    JSValue *rocBridgeContext = window[@"rocBridgeContext"];
+    JSValue *test = rocBridgeContext[@"test"];
+    NSString *str = [test toString];
+    
 }
 
 - (void)updateExceptionHandler

@@ -1,4 +1,4 @@
-import {RocBridgeDelegate, RocBridgeRegistry} from './RocBridge/context/context'
+import {RocBridgeDelegate, RocBridge} from './RocBridge/context/context'
 
 class  RocBridgeDemoDelegate extends RocBridgeDelegate
 {
@@ -8,4 +8,4 @@ class  RocBridgeDemoDelegate extends RocBridgeDelegate
 }
 
 var detegate = new RocBridgeDemoDelegate();
-RocBridgeRegistry.registerDelegate(detegate);
+RocBridge.registerDelegate(detegate);
