@@ -3,6 +3,7 @@ import { BaseManager } from "./manager/base/base-manager";
 import { ManagerGroup } from "./manager/base/manager-group";
 import { InterfaceImplementation } from "./manager/base/base-type";
 import { JSIntefaceManager } from "./manager/js-interface-manager";
+import { JSNativeLinkManager } from "./manager/js-native-link-manager";
 
 class RocBridgeContext
 {
@@ -18,6 +19,7 @@ class RocBridgeContext
     managerGroup: ManagerGroup = new ManagerGroup();
 
     constructor() {
+        this.managerGroup.jsNativeLinkManager = new JSNativeLinkManager(this.managerGroup, this.managers);
         this.managerGroup.lifeCycleManager = new LifeCycleManager(this.managerGroup, this.managers);        
         this.managerGroup.jsIntefaceManager = new JSIntefaceManager(this.managerGroup, this.managers);        
 
@@ -41,8 +43,8 @@ export class RocBridge {
         RocBridgeContext.shareInstance().managerGroup.lifeCycleManager.registerDelegate(delegate);
     }
 
-    static registerInterface = (className: string, interfaceaName: string, impl:InterfaceImplementation, sync: boolean) => {
-        RocBridgeContext.shareInstance().managerGroup.jsIntefaceManager.registerInterface(className, interfaceaName, impl, sync);
+    static registerInterface = (className: string, interfaceName: string, impl:InterfaceImplementation, sync: boolean) => {
+        RocBridgeContext.shareInstance().managerGroup.jsIntefaceManager.registerInterface(className, interfaceName, impl, sync);
     }
 
 }
