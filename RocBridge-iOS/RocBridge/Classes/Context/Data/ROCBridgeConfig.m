@@ -6,7 +6,7 @@
 //  Copyright © 2021 RocYang. All rights reserved.
 //
 
-#import "RocBridgeConfig.h"
+#import "ROCBridgeConfig.h"
 
 @implementation ROCBridgeConfig
 

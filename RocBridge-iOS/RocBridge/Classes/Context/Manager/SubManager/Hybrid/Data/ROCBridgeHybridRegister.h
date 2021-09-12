@@ -1,5 +1,5 @@
 //
-//  ROCBridgeHybridModuleRegister.h
+//  ROCBridgeHybridRegister.h
 //  RocBridge
 //
 //  Created by RocYang on 2021/6/29.
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ROCBridgeHybridModuleRegister : NSObject
+@interface ROCBridgeHybridRegister : NSObject
 
 @property(nonatomic) Class moduleClass;
 

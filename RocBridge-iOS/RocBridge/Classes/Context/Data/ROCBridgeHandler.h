@@ -18,10 +18,10 @@ typedef void(^ROCLogHandler)(ROCBridgeContextLog *log);
 
 @interface ROCBridgeHandler : NSObject
 
-@property(nonatomic,copy) ROCExceptionHandler exceptionHandler;
-@property(nonatomic,copy) ROCInitCompleteHandler initCompleteHandler;
-@property(nonatomic,copy) ROCLogHandler logHandler;
-@property(nonatomic,strong) NSArray<ROCBridgeEventHandler *> *eventHandlerArray;
+@property(nonatomic) ROCExceptionHandler exceptionHandler;
+@property(nonatomic) ROCInitCompleteHandler initCompleteHandler;
+@property(nonatomic) ROCLogHandler logHandler;
+@property(nonatomic) NSArray<ROCBridgeEventHandler *> *eventHandlerArray;
 
 @end
 

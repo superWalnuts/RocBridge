@@ -59,3 +59,8 @@
 }
 
 @end
+
+
+@implementation ROCBridgeBaseManagerConfig
+
+@end
