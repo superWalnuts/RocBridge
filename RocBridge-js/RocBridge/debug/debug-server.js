@@ -90,7 +90,7 @@ class RocBridgeHttpServer {
         this.registerHttpHandler.call(this);
     }
 
-    registerHttpHandler = () => {
+    registerHttpHandler() {
         this.server.get('/bundle.js', (req, res) => {
             console.log('registerHttpHandler request');
 

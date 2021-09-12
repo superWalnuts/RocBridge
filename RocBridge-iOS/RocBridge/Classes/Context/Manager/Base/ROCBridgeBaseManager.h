@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)throwException:(NSString *)exceptionInfo detailInfo:(NSString *)detailInfo;
 
-- (NSDictionary *)invokeMethodWithMethodName:(NSString *)methodName arguments:(NSArray *)arguments;
+- (NSDictionary *)invokeMethodWithMethodName:(NSString *)methodName params:(NSDictionary *)params;
  
 - (void)injectionMethodWithMethodName:(NSString *)methodName implementation:(ROCBridgeMethodImplementation)implementation;
 

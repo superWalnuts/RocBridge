@@ -3,9 +3,7 @@ import { BaseManager } from "./base/base-manager";
 
 
 export abstract class RocBridgeDelegate {
-    abstract main = (params: any):any => {
-
-    }
+    abstract main : (params: any) => any;
 }
 
 export class LifeCycleManager extends BaseManager

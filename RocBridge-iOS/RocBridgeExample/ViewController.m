@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSData *jsData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://192.168.1.105:52229/bundle.js"]];
+    NSData *jsData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://192.168.1.105:60105/bundle.js"]];
     NSString *jsStr = [[NSString alloc] initWithData:jsData encoding:NSUTF8StringEncoding];
     
     ROCBridgeConfig *config = [ROCBridgeConfig new];

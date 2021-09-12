@@ -41,10 +41,10 @@
 }
 
 - (NSDictionary *)invokeMethodWithMethodName:(NSString *)methodName
-                                   arguments:(NSArray *)arguments
+                                      params:(NSDictionary *)params
 {
     if (self.baseManagerConfig.contextCore) {
-        return [self.baseManagerConfig.contextCore invokeMethodWithManagerName:[self managerName] methodName:methodName arguments:arguments];
+        return [self.baseManagerConfig.contextCore invokeJSMethodWithManagerName:[self managerName] methodName:methodName params:params];
     }
     
     return nil;

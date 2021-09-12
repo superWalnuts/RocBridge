@@ -3,7 +3,7 @@ import { BaseManager } from "./manager/base/base-manager";
 import { ManagerGroup } from "./manager/base/manager-group";
 import { InterfaceImplementation } from "./manager/base/base-type";
 import { JSIntefaceManager } from "./manager/js-interface-manager";
-import { JSNativeLinkManager } from "./manager/js-native-link-manager";
+import { JsNativeLinkCore } from "./manager/link/js-native-link-core";
 
 class RocBridgeContext
 {
@@ -15,13 +15,14 @@ class RocBridgeContext
         return RocBridgeContext.instance;
     }
 
+    private jsNativeLinkCore: JsNativeLinkCore;
     private managers: BaseManager[] = [];
     managerGroup: ManagerGroup = new ManagerGroup();
 
     constructor() {
-        this.managerGroup.jsNativeLinkManager = new JSNativeLinkManager(this.managerGroup, this.managers);
-        this.managerGroup.lifeCycleManager = new LifeCycleManager(this.managerGroup, this.managers);        
-        this.managerGroup.jsIntefaceManager = new JSIntefaceManager(this.managerGroup, this.managers);        
+        this.jsNativeLinkCore = new JsNativeLinkCore();
+        this.managerGroup.lifeCycleManager = new LifeCycleManager(this.managerGroup, this.managers, this.jsNativeLinkCore);        
+        this.managerGroup.jsIntefaceManager = new JSIntefaceManager(this.managerGroup, this.managers, this.jsNativeLinkCore);        
 
         this.initAllManager();
     }

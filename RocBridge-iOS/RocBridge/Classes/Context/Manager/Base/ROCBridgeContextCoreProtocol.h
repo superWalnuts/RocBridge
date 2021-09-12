@@ -10,13 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NSDictionary *_Nullable(^ROCBridgeMethodImplementation)(NSDictionary *invokeInfo, NSDictionary *data);
+typedef NSDictionary *_Nullable(^ROCBridgeMethodImplementation)(NSDictionary *params);
 
 @protocol ROCBridgeContextCoreProtocol <NSObject>
 
-- (NSDictionary * _Nullable)invokeMethodWithManagerName:(NSString *)managerName
-                                   methodName:(NSString *)methodName
-                                    arguments:(NSArray *)arguments;
+- (NSDictionary * _Nullable)invokeJSMethodWithManagerName:(NSString *)managerName
+                                               methodName:(NSString *)methodName
+                                                   params:(NSDictionary *)params;
  
 - (void)injectionMethodWithManagerName:(NSString *)managerName
                             methodName:(NSString *)methodName

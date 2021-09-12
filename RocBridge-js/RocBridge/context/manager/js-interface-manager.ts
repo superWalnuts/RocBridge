@@ -105,11 +105,11 @@ export class JSIntefaceManager extends BaseManager {
     }
 
     registerInterfaceToNative = (className: string, interfaceName: string, isSync: boolean) => {
-        this.managerGroup.jsNativeLinkManager.invokeNativeMethod({ 'className': this.className, 'methodName': "registerInterfaceToNative" }, { 'className': className, 'interfaceName': interfaceName, 'isSync': isSync });
+        this.jsNativeLinkCore.invokeNativeMethod({ 'className': this.className, 'methodName': "registerInterfaceToNative" }, { 'className': className, 'interfaceName': interfaceName, 'isSync': isSync });
     }
 
     invokeAsyncInterfaceCallback = (invokeInfo: InvokeInterfaceInfo, response: InterfaceResponse) => {
-        this.managerGroup.jsNativeLinkManager.invokeNativeMethod({ 'className': this.className, 'methodName': "invokeAsyncInterfaceCallback" }, { 'invokeInfo': invokeInfo, 'response': response });
+        this.jsNativeLinkCore.invokeNativeMethod({ 'className': this.className, 'methodName': "invokeAsyncInterfaceCallback" }, { 'invokeInfo': invokeInfo, 'response': response });
     }
 
 }
