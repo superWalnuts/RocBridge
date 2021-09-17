@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ROCBridgeHybridModuleRegister.h"
+#import "ROCBridgeHybridRegister.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong) NSString *name;
 
 /// Registration of Hybrid Modules.
-@property(nonatomic, strong) NSArray<ROCBridgeHybridModuleRegister *> *hybridModules;
+@property(nonatomic, strong) NSArray<ROCBridgeHybridRegister *> *hybridModules;
 
 /// Pass it into the main method when the environment is initialized.
 @property(nonatomic, strong) NSDictionary *mainParameter;

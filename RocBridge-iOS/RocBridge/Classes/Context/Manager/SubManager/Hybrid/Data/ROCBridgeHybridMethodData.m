@@ -10,9 +10,17 @@
 
 @implementation ROCBridgeHybridMethodData
 
+- (instancetype)initWithMethodInfo:(NSDictionary *)methodInfo hybridRegister:(ROCBridgeHybridRegister *)hybridRegister
+{
+    self = [super init];
+    if (self) {
+           
+    }
+    return self;
+}
 
 - (NSDictionary *)coreInfo
 {
-    
+    return @{@"isSync": @(self.isSync)};
 }
 @end

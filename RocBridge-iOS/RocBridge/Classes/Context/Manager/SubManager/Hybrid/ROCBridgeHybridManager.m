@@ -42,8 +42,8 @@
         [self.localHybridModuleDataDic setObject:moduleData forKey:moduleData.moduleName];
         
         NSMutableDictionary *moduleCoreDic = [NSMutableDictionary new];
-        for (NSString *methodName in moduleData.methodDataDic) {
-            ROCBridgeHybridMethodData *methodData = [moduleData.methodDataDic objectForKey:methodName];
+        for (NSString *methodName in moduleData.methodBook) {
+            ROCBridgeHybridMethodData *methodData = [moduleData.methodBook objectForKey:methodName];
             [moduleCoreDic setObject:[methodData coreInfo] forKey:methodName];
         }
         

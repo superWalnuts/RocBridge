@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ROCBridgeHybridModuleData : NSObject
 
 @property (nonatomic, readonly) NSString *moduleName;
-@property (nonatomic, readonly) NSDictionary<NSString *, ROCBridgeHybridMethodData *> *methodDataDic;
+@property (nonatomic, readonly) NSDictionary<NSString *, ROCBridgeHybridMethodData *> *methodBook;
 
 - (instancetype)initWithHybridRegister:(ROCBridgeHybridRegister *)hybridRegister eventManager:(ROCBridgeEventManager *)eventManager;
 

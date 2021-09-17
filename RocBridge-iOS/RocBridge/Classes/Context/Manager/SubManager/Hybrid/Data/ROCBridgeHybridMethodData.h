@@ -7,10 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ROCBridgeHybridRegister.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ROCBridgeHybridMethodData : NSObject
+
+- (instancetype)initWithMethodInfo:(NSDictionary *)methodInfo hybridRegister:(ROCBridgeHybridRegister *)hybridRegister;
+
+@property(nonatomic, readonly) NSString *hybridMethodName;
+@property(nonatomic, readonly) BOOL isSync;
+
 
 - (NSDictionary *)coreInfo;
 @end
