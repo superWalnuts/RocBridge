@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithMethodInfo:(NSDictionary *)methodInfo hybridRegister:(ROCBridgeHybridRegister *)hybridRegister;
 
+@property(nonatomic, readonly) NSString *originalMethodName;
 @property(nonatomic, readonly) NSString *hybridMethodName;
 @property(nonatomic, readonly) BOOL isSync;
 
