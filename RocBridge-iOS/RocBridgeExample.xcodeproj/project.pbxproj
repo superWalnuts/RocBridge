@@ -180,6 +180,8 @@
 		313D7A6E2691B9420068BCC9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				31DD922C26EDD72700BC5592 /* ROCBridgeHybridAdditionInfo.h */,
+				31DD922D26EDD72700BC5592 /* ROCBridgeHybridAdditionInfo.m */,
 				31CDF531268B77F600590431 /* ROCBridgeHybridRegister.h */,
 				31CDF532268B77F600590431 /* ROCBridgeHybridRegister.m */,
 				31CDF545268E0E4500590431 /* ROCBridgeHybridResponse.h */,
@@ -332,8 +334,6 @@
 				313D7A6D2691B92E0068BCC9 /* HybridModule */,
 				31DD922726EDD65300BC5592 /* ROCBridgeHybridManager.h */,
 				31DD922826EDD65300BC5592 /* ROCBridgeHybridManager.m */,
-				31DD922C26EDD72700BC5592 /* ROCBridgeHybridAdditionInfo.h */,
-				31DD922D26EDD72700BC5592 /* ROCBridgeHybridAdditionInfo.m */,
 			);
 			path = Hybrid;
 			sourceTree = "<group>";

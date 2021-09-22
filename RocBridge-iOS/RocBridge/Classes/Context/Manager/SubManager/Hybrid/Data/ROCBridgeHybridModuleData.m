@@ -15,7 +15,7 @@
 @property (nonatomic) ROCBridgeEventManager *eventManager;
 @property (nonatomic) NSDictionary<NSString *, ROCBridgeHybridMethodData *> *methodBook;
 @property (nonatomic) NSString *moduleName;
-
+@property (nonatomic) dispatch_queue_t queue;
 @end
 
 @implementation ROCBridgeHybridModuleData
@@ -94,6 +94,28 @@
     }
     
     self.methodBook = methodBook;
+}
+
+- (ROCBridgeBaseHybridModule *)moduleObject
+{
+    if (!self.hybridRegister.moduleInstance) {
+        self.hybridRegister.moduleInstance = [self.hybridRegister.moduleClass new];
+    }
+    
+    return self.hybridRegister.moduleInstance;
+}
+
+- (dispatch_queue_t)moduleQueue
+{
+    if (!self.queue) {
+        self.queue = dispatch_queue_create('test', DISPATCH_QUEUE_SERIAL);
+    }
+    return self.queue
+}
+
+- (dispatch_queue_t)getCurrentQueue
+{
+    
 }
 
 @end

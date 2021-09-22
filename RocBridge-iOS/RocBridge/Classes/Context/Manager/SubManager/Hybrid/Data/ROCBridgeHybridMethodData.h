@@ -18,9 +18,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, readonly) NSString *originalMethodName;
 @property(nonatomic, readonly) NSString *hybridMethodName;
 @property(nonatomic, readonly) BOOL isSync;
+@property(nonatomic, readonly) BOOL needAdditionInfo;
 
 
 - (NSDictionary *)coreInfo;
+
+- (IMP)getMethodIMP;
+- (SEL)getMethodSEL;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END

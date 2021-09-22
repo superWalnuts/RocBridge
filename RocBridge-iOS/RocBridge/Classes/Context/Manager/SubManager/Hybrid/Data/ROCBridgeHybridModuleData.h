@@ -19,6 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithHybridRegister:(ROCBridgeHybridRegister *)hybridRegister eventManager:(ROCBridgeEventManager *)eventManager;
 
+- (ROCBridgeBaseHybridModule *)moduleObject;
+
+- (dispatch_queue_t)moduleQueue;
+
 @end
 
 NS_ASSUME_NONNULL_END

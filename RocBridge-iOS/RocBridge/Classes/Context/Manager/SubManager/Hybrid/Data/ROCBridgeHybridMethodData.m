@@ -77,6 +77,11 @@
     return imp;
 }
 
+- (SEL)getMethodSEL
+{
+    return self.selector;
+}
+
 - (BOOL)checkArguments
 {
     return YES;
@@ -107,7 +112,7 @@
 - (void)updateArgumentsAndSelectorWithOriginalMethodName:(NSString *)originalMethodName
 {
     NSArray<ROCBridgeHybridArgumentData *> *arguments;
-    self.selector = ROCParseMethodOriginalName(originalMethodName, arguments);
+    self.selector = ROCParseMethodOriginalName(originalMethodName, &arguments);
     self.arguments = arguments;
     
     if (!self.selector) {
@@ -157,7 +162,7 @@ SEL ROCParseMethodOriginalName(NSString *originalMethodName, NSArray<ROCBridgeHy
             ROCReadChar(&input, ')');
             ROCSkipWhitespace(&input);
         } else {
-            type = id;
+            type = @"id";
             nullability = ROCArgumentNullable;
             unused = NO;
         }
