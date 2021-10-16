@@ -22,6 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL success;
 @property (nonatomic) ROCBridgeResponseCode code;
 @property (nonatomic) NSDictionary *data;
+
+- (NSDictionary *)toDic;
+- (void)setUpWithDic:(NSDictionary *)data;
 @end
 
 typedef void(^ROCBridgeResponseCallback)(ROCBridgeHybridResponse *response);

@@ -34,10 +34,6 @@ class RocBridgeContext
     }
 }
 
-window['rocBridgeContext'] = RocBridgeContext.shareInstance();
-
-
-
 export class RocBridge {
 
     static registerDelegate = (delegate: RocBridgeDelegate) => {

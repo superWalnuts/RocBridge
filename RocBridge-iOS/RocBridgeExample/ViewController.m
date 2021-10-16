@@ -21,7 +21,11 @@
     
     ROCBridgeConfig *config = [ROCBridgeConfig new];
     config.name = @"test";
-    config.viewController = self;
+    
+    ROCBridgeHybridAdditionInfo *additionInfo = [ROCBridgeHybridAdditionInfo new];
+    additionInfo.viewController = self;
+    
+    config.additionInfo = additionInfo;
     
     ROCBridgeHandler *handler = [ROCBridgeHandler new];
     handler.exceptionHandler = ^(NSString * _Nonnull exceptionInfo, NSString * _Nonnull detailInfo) {

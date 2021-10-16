@@ -108,14 +108,14 @@
 - (dispatch_queue_t)moduleQueue
 {
     if (!self.queue) {
-        self.queue = dispatch_queue_create('test', DISPATCH_QUEUE_SERIAL);
+        self.queue = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
     }
-    return self.queue
+    return self.queue;
 }
 
 - (dispatch_queue_t)getCurrentQueue
 {
-    
+    return nil;
 }
 
 @end

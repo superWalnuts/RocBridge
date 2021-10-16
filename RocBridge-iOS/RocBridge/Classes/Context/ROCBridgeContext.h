@@ -8,7 +8,7 @@
 
 #import "ROCBridgeConfig.h"
 #import "ROCBridgeHandler.h"
-#import "ROCBridgeHybridRequest.h"
+#import "ROCBridgeJSInterfaceRequest.h"
 #import "ROCBridgeEventHandler.h"
 #import <WebKit/WKWebView.h>
 NS_ASSUME_NONNULL_BEGIN
@@ -35,16 +35,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 
 /// Invokes an asynchronous method in the JS context.
-/// @param hybridRequest Request info.
-- (void)invokeJSAsyncMethod:(ROCBridgeHybridRequest *)hybridRequest;
-
+/// @param interfaceRequest Request info.
+- (void)invokeJSAsyncInterface:(ROCBridgeJSInterfaceRequest *)interfaceRequest;
 
 - (void)registerEventHandler:(ROCBridgeEventHandler *)eventHandler;
 
-
 - (void)unRegisterEventHandler:(ROCBridgeEventHandler *)eventHandler;
-
-
 @end
 
 NS_ASSUME_NONNULL_END

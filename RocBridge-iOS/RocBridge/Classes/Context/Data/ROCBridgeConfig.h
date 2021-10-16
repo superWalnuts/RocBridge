@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ROCBridgeHybridRegister.h"
+#import "ROCBridgeHybridAdditionInfo.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -23,8 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// Pass it into the main method when the environment is initialized.
 @property(nonatomic, strong) NSDictionary *mainParameter;
 
-/// Current viewController.
-@property(nonatomic, weak) UIViewController *viewController;
+@property(nonatomic, strong) ROCBridgeHybridAdditionInfo *additionInfo;
 
 @property(nonatomic, strong) JSVirtualMachine *jsVirtualMachine;
 

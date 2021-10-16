@@ -12,6 +12,7 @@
 
 #import "ROCBridgeHybridManager.h"
 #import "ROCBridgeEventManager.h"
+#import "ROCBridgeJSInterfaceManager.h"
 
 @interface ROCBridgeContext()
 @property (nonatomic) id<ROCBridgeContextCoreProtocol> contextCore;
@@ -21,6 +22,7 @@
 
 @property (nonatomic) ROCBridgeHybridManager *bridgeHybridManager;
 @property (nonatomic) ROCBridgeEventManager *bridgeEventManager;
+@property (nonatomic) ROCBridgeJSInterfaceManager *jsInterfaceManager;
 
 @end
 
@@ -71,15 +73,19 @@
     
     self.bridgeEventManager = [[ROCBridgeEventManager alloc] initWithConfig:managerConfig];
     
+    self.jsInterfaceManager = [[ROCBridgeJSInterfaceManager alloc] initWithConfig:managerConfig];
+    
     self.bridgeHybridManager = [[ROCBridgeHybridManager alloc] initWithConfig:managerConfig];
-    [self.bridgeHybridManager setUpManagerWith:nil eventManager:self.bridgeEventManager addtionInfo:nil];
+    [self.bridgeHybridManager setUpManagerWith:self.contextConfig.hybridModules eventManager:self.bridgeEventManager additionInfo:self.contextConfig.additionInfo];
     
 }
 
 
-- (void)invokeJSAsyncMethod:(ROCBridgeHybridRequest *)request
+- (void)invokeJSAsyncInterface:(ROCBridgeJSInterfaceRequest *)interfaceRequest;
 {
-    
+    dispatch_async(self.bridgeQueue, ^{
+        [self.jsInterfaceManager invokeJSAsyncInterface:interfaceRequest];
+    });
 }
 
 

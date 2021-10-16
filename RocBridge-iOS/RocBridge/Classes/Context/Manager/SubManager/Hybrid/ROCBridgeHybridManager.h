@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setUpManagerWith:(NSArray<ROCBridgeHybridRegister *> *)hybridRegisterArray
             eventManager:(ROCBridgeEventManager *)eventManager
-             addtionInfo:(ROCBridgeHybridAdditionInfo *)addtionInfo;
+             additionInfo:(ROCBridgeHybridAdditionInfo *)additionInfo;
 
 @end
 

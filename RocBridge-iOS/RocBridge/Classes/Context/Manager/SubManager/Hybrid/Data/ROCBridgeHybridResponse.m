@@ -10,4 +10,19 @@
 
 @implementation ROCBridgeHybridResponse
 
+- (NSDictionary *)toDic
+{
+    return @{@"success": @(self.success), @"code": @(self.code), @"data": self.data?:@{}};
+}
+
+- (void)setUpWithDic:(NSDictionary *)data
+{
+    if (!data) {
+        return;
+    }
+    
+    self.success = [data[@"success"] boolValue];
+    self.code = [data[@"code"] integerValue];
+    self.data = data[@"data"];
+}
 @end

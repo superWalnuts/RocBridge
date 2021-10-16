@@ -7,6 +7,14 @@ export class JSIntefaceManager extends BaseManager {
     className: string = 'JSIntefaceManager';
     interfaceBook: Map<string, Map<string, InterfaceInfo>> = new Map();
 
+    managerInitCompleted = () => {
+        this.jsNativeLinkCore.regsiterJsMethod({className: this.className, methodName: 'invokeInterface'}, (data)=>{
+            let invokeInfo = data['invokeInfo'];
+            let param = data['param'];
+            this.invokeInterface(invokeInfo, param);
+        });
+    }
+
     registerInterface = (className: string, interfaceName: string, impl: InterfaceImplementation, isSync: boolean) => {
 
         if (!interfaceName || !className) {

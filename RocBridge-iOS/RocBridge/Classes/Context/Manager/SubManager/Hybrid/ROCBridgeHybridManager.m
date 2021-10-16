@@ -11,6 +11,7 @@
 #import "ROCBridgeHybridAdditionInfo.h"
 
 typedef void(^ROCBridgeHybridSyncCall)(void);
+typedef void(^ROCBridgeHybridAsyncCall)(void);
 
 
 #define SYCN_NORMAL_METHOD_TYPE(method, imp) \
@@ -22,7 +23,7 @@ ROCBridgeHybridResponse* (*method)(id, SEL, NSDictionary *, ROCBridgeHybridAddit
 #define ASYCN_NORMAL_METHOD_TYPE(method, imp) \
 void(*method)(id, SEL, NSDictionary *, ROCBridgeResponseCallback) = (void *)imp;
 
-#define ASYCN_NORMAL_METHOD_TYPE(method, imp) \
+#define ASYCN_ADDITIONINFO_METHOD_TYPE(method, imp) \
 void(*method)(id, SEL, NSDictionary *, ROCBridgeHybridAdditionInfo *, ROCBridgeResponseCallback) = (void *)imp;
 
 @interface ROCBridgeHybridManager()
@@ -36,11 +37,25 @@ void(*method)(id, SEL, NSDictionary *, ROCBridgeHybridAdditionInfo *, ROCBridgeR
 - (void)initManagerCompleted
 {
     self.localHybridModuleDataDic = [NSMutableDictionary new];
+    
+    __weak typeof(self) weakSelf = self;
+    [self injectionMethodWithMethodName:@"invokeNativeAsyncMethod" implementation:^NSDictionary * _Nullable(NSDictionary * _Nonnull params) {
+        NSDictionary *invokeInfo = params[@"invokeInfo"];
+        NSDictionary *param = params[@"param"];
+        [weakSelf invokeNativeAsyncMethod:invokeInfo param:param];
+        return nil;
+    }];
+    
+    [self injectionMethodWithMethodName:@"invokeNativeSyncMethod" implementation:^NSDictionary * _Nullable(NSDictionary * _Nonnull params) {
+        NSDictionary *invokeInfo = params[@"invokeInfo"];
+        NSDictionary *param = params[@"param"];
+        return [weakSelf invokeNativeSyncMethod:invokeInfo param:param];
+    }];
 }
 
 - (void)setUpManagerWith:(NSArray<ROCBridgeHybridRegister *> *)hybridRegisterArray
             eventManager:(ROCBridgeEventManager *)eventManager
-             addtionInfo:(ROCBridgeHybridAdditionInfo *)addtionInfo {
+             additionInfo:(ROCBridgeHybridAdditionInfo *)additionInfo {
     self.additionInfo = additionInfo;
     [self registerHybridWithHybridRegisterArray:hybridRegisterArray];
 }
@@ -77,6 +92,69 @@ void(*method)(id, SEL, NSDictionary *, ROCBridgeHybridAdditionInfo *, ROCBridgeR
     [self invokeMethodWithMethodName:@"registerHybrid" params:@{@"hybridRegisterInfoDic": hybridRegisterInfoDic}];
 }
 
+- (void)invokeNativeAsyncMethod:(NSDictionary *)invokeInfo param:(NSDictionary *)param
+{
+    NSString *moduleName = invokeInfo[@"moduleName"];
+    NSString *methodName = invokeInfo[@"methodName"];
+    
+    ROCBridgeHybridModuleData *moduleData = [self.localHybridModuleDataDic objectForKey:moduleName];
+    ROCBridgeHybridMethodData *methodData = [moduleData.methodBook objectForKey:methodName];
+    
+    ROCBridgeBaseHybridModule *moduleObj = [moduleData moduleObject];
+    
+    IMP methodImp = [methodData getMethodIMP];
+    SEL methodSel = [methodData getMethodSEL];
+    
+    ROCBridgeHybridAsyncCall asyncCall = nil;
+    
+    __weak typeof(self) weakSelf = self;
+    ROCBridgeResponseCallback responseCallback = ^(ROCBridgeHybridResponse *response){
+        [weakSelf invokeNativeAsyncMethodCallback:response];
+    };
+    
+    if (methodImp) {
+        __weak typeof(moduleObj) weakModuleObj = moduleObj;
+        __weak typeof(self.additionInfo) weakAdditionInfo = self.additionInfo;
+
+        asyncCall = ^() {
+            if (!weakModuleObj) {
+                return ;
+            }
+            if (methodData.needAdditionInfo) {
+                ASYCN_ADDITIONINFO_METHOD_TYPE(func, methodImp);
+                func(weakModuleObj, methodSel, param, weakAdditionInfo, responseCallback);
+            }else{
+                ASYCN_NORMAL_METHOD_TYPE(func, methodImp)
+                func(weakModuleObj, methodSel, param, responseCallback);
+            }
+        };
+    }else{
+        
+        asyncCall = ^(){
+            ROCBridgeHybridResponse *response = [ROCBridgeHybridResponse new];
+            response.success = NO;
+            response.code = ROCBridgeResponseMethodInexistence;
+            response.data = @{};
+            responseCallback(response);
+        };
+    }
+    
+    dispatch_queue_t queue = [moduleData moduleQueue];
+    
+    if (queue == nil) {
+        ROCBridgeHybridResponse *response = [ROCBridgeHybridResponse new];
+        response.success = NO;
+        response.code = ROCBridgeResponseException;
+        response.data = @{};
+        responseCallback(response);
+        return;
+    }
+    
+    dispatch_async(queue, ^{
+        asyncCall();
+    });
+}
+
 - (ROCBridgeHybridResponse *)invokeNativeSyncMethod:(NSDictionary *)invokeInfo param:(NSDictionary *)param
 {
     NSString *moduleName = invokeInfo[@"moduleName"];
@@ -101,17 +179,17 @@ void(*method)(id, SEL, NSDictionary *, ROCBridgeHybridAdditionInfo *, ROCBridgeR
                 return ;
             }
             if (methodData.needAdditionInfo) {
-                SYCN_ADDITIONINFO_METHOD_TYPE(func, func);
+                SYCN_ADDITIONINFO_METHOD_TYPE(func, methodImp);
                 response = func(weakModuleObj, methodSel, param, weakAdditionInfo);
             }else{
-                SYCN_NORMAL_METHOD_TYPE(func, func)
+                SYCN_NORMAL_METHOD_TYPE(func, methodImp)
                 response = func(weakModuleObj, methodSel, param);
             }
-        }
+        };
     }else{
         response.success = NO;
         response.code = ROCBridgeResponseMethodInexistence;
-        response.data = nil;
+        response.data = @{};
         syncCall = ^(){};
     }
     
@@ -121,7 +199,7 @@ void(*method)(id, SEL, NSDictionary *, ROCBridgeHybridAdditionInfo *, ROCBridgeR
         NSAssert(NO, @"error");
         response.success = NO;
         response.code = ROCBridgeResponseException;
-        response.data = nil;
+        response.data = @{};
         return response;
     }
     
@@ -130,6 +208,13 @@ void(*method)(id, SEL, NSDictionary *, ROCBridgeHybridAdditionInfo *, ROCBridgeR
     });
     
     return response;
+}
+
+- (void)invokeNativeAsyncMethodCallback:(ROCBridgeHybridResponse *)response
+{
+    dispatch_async(self.bridgeQueue, ^{
+        [self invokeMethodWithMethodName:@"invokeNativeAsyncMethodCallback" params:[response toDic]];
+    });
 }
 
 - (NSString *)managerName
