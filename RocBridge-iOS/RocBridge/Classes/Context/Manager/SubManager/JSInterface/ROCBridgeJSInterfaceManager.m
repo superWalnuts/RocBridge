@@ -27,7 +27,6 @@
         return nil;
     }];
     
-    __weak typeof(self) weakSelf = self;
     [self injectionMethodWithMethodName:@"invokeAsyncInterfaceCallback" implementation:^NSDictionary * _Nullable(NSDictionary * _Nonnull params) {
         [weakSelf registerInterfaceToNative:params];
         return nil;
@@ -38,7 +37,6 @@
 {
     NSString *className = params[@"className"];
     NSString *interfaceName = params[@"interfaceName"];
-    BOOL isSync = [params[@"isSync"] boolValue];
     
     if (className.length == 0 || interfaceName.length == 0) {
           return NO;
@@ -51,6 +49,8 @@
     }
     
     [classInfoDic setObject:params forKey:interfaceName];
+    
+    return YES;
 }
 
 - (void)invokeJSAsyncInterface:(ROCBridgeJSInterfaceRequest *)interfaceRequest

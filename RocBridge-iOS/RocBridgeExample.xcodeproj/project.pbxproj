@@ -12,8 +12,10 @@
 		313D7A76269358780068BCC9 /* ROCBridgeJSContextCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 313D7A74269358780068BCC9 /* ROCBridgeJSContextCore.m */; };
 		313F7074271AA75300362861 /* ROCBridgeJSInterfaceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 313F7072271AA75300362861 /* ROCBridgeJSInterfaceManager.h */; };
 		313F7075271AA75300362861 /* ROCBridgeJSInterfaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 313F7073271AA75300362861 /* ROCBridgeJSInterfaceManager.m */; };
-		313F7079271AB4A100362861 /* ROCBridgeJSInterfaceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 313F7077271AB4A100362861 /* ROCBridgeJSInterfaceRequest.h */; };
+		313F7079271AB4A100362861 /* ROCBridgeJSInterfaceRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 313F7077271AB4A100362861 /* ROCBridgeJSInterfaceRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		313F707A271AB4A100362861 /* ROCBridgeJSInterfaceRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 313F7078271AB4A100362861 /* ROCBridgeJSInterfaceRequest.m */; };
+		313F707E2725489600362861 /* ROCBridgeLifeCycleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 313F707C2725489600362861 /* ROCBridgeLifeCycleManager.h */; };
+		313F707F2725489600362861 /* ROCBridgeLifeCycleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 313F707D2725489600362861 /* ROCBridgeLifeCycleManager.m */; };
 		31C3745926838272000744C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745826838272000744C0 /* AppDelegate.m */; };
 		31C3745C26838272000744C0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745B26838272000744C0 /* SceneDelegate.m */; };
 		31C3745F26838272000744C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C3745E26838272000744C0 /* ViewController.m */; };
@@ -94,6 +96,8 @@
 		313F7073271AA75300362861 /* ROCBridgeJSInterfaceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeJSInterfaceManager.m; sourceTree = "<group>"; };
 		313F7077271AB4A100362861 /* ROCBridgeJSInterfaceRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeJSInterfaceRequest.h; sourceTree = "<group>"; };
 		313F7078271AB4A100362861 /* ROCBridgeJSInterfaceRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeJSInterfaceRequest.m; sourceTree = "<group>"; };
+		313F707C2725489600362861 /* ROCBridgeLifeCycleManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ROCBridgeLifeCycleManager.h; sourceTree = "<group>"; };
+		313F707D2725489600362861 /* ROCBridgeLifeCycleManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ROCBridgeLifeCycleManager.m; sourceTree = "<group>"; };
 		31C3745426838272000744C0 /* RocBridgeExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocBridgeExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C3745726838272000744C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		31C3745826838272000744C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -241,6 +245,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		313F707B2725483100362861 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				313F707C2725489600362861 /* ROCBridgeLifeCycleManager.h */,
+				313F707D2725489600362861 /* ROCBridgeLifeCycleManager.m */,
+			);
+			path = LifeCycle;
+			sourceTree = "<group>";
+		};
 		31C3744B26838272000744C0 = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +360,7 @@
 		31DD922626EDD5B500BC5592 /* SubManager */ = {
 			isa = PBXGroup;
 			children = (
+				313F707B2725483100362861 /* LifeCycle */,
 				313F7071271AA72000362861 /* JSInterface */,
 				31DD923026EDDC7E00BC5592 /* Event */,
 				31DD922B26EDD65B00BC5592 /* Hybrid */,
@@ -412,6 +426,7 @@
 				31CDF51B268A139C00590431 /* ROCBridgeConfig.h in Headers */,
 				313F7079271AB4A100362861 /* ROCBridgeJSInterfaceRequest.h in Headers */,
 				31CDF547268E0E4500590431 /* ROCBridgeHybridResponse.h in Headers */,
+				313F707E2725489600362861 /* ROCBridgeLifeCycleManager.h in Headers */,
 				313D7A75269358780068BCC9 /* ROCBridgeJSContextCore.h in Headers */,
 				31DD923326EDDC9700BC5592 /* ROCBridgeEventManager.h in Headers */,
 				31DD923726EDDEB900BC5592 /* ROCBridgeHybridModuleData.h in Headers */,
@@ -570,6 +585,7 @@
 				31CDF540268E09AE00590431 /* ROCBridgeHandler.m in Sources */,
 				31DD923C26EDE0ED00BC5592 /* ROCBridgeHybridMethodData.m in Sources */,
 				31DD923426EDDC9700BC5592 /* ROCBridgeEventManager.m in Sources */,
+				313F707F2725489600362861 /* ROCBridgeLifeCycleManager.m in Sources */,
 				31DD923826EDDEB900BC5592 /* ROCBridgeHybridModuleData.m in Sources */,
 				31DD924026F9A23900BC5592 /* ROCBridgeHybridArgumentData.m in Sources */,
 				31CDF53C268B7B5A00590431 /* ROCBridgeBaseManager.m in Sources */,

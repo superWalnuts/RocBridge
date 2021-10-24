@@ -10,4 +10,6 @@
 
 @implementation ROCBridgeBaseHybridModule
 
+ROC_MODULE_NAME(RocModuleName);
+SUPPER_EVENT_NAMES(Name);
 @end
